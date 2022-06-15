@@ -1,0 +1,280 @@
+body {
+    margin:0;
+    padding:0;
+}
+
+h1 {
+    margin-top:0px;
+    color: #fff;
+}
+
+
+a {
+    color: #000;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+header h1{
+    width: 30%;
+    color: #000;
+}
+
+
+header h1,
+header nav ul{
+    margin-top: 20px;
+    margin-bottom:20px;
+}
+
+header nav {
+    width: 60%;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    padding:0
+}
+
+
+
+header a {
+    color: #000;
+}
+
+
+
+.login_footer,
+.legister_footer {
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+
+    margin-top: 10%;
+}
+
+
+
+footer {
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    color: #000;
+
+    margin-top: 5vh;
+}
+
+foo
+
+.logged_in_footer{
+    color: #000;
+    margin-top: 0px;
+}
+
+.form_img {
+    position: absolute;
+    z-index: -999;
+    width: 100vw;
+    height: 100vh;
+   
+}
+
+.login,
+.register {
+    background-image: url('../images/not_logged_in_img.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding-top: 10%;
+    
+}
+
+
+.login_main,
+.register_main{
+    width: 40vw;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30vw;
+    margin-left: 30vw;
+}
+
+.login_form,
+.register_form{
+    background-color: rgba(0,0,0,0.25);
+    border: 1px solid #fff;
+    height: 20vh;
+    text-align:center;
+    padding-top: 15%;   
+}
+
+
+.login_form a,
+.register_form a{
+    color: #fff;
+}
+
+.login_content,
+.register_content{
+    margin-bottom:20px;
+}
+
+
+/*
+|----ユーザー画面
+*/
+
+
+.user {
+    text-align: center;
+}
+
+.user_info{
+    
+    display: flex;
+    justify-content: space-around;
+    margin-right: 5vw;
+    margin-left: 5vw;
+    border: 1px solid #000;
+    align-items: center;
+    max-height: 80vh;
+    min-height: 80vh;
+}
+
+.user_text{
+    width: 50%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+
+
+
+.user_info img{
+    width: 40%;
+   
+    object-fit: contain;
+    max-height: 70vh;
+}
+
+
+
+.update {
+
+    margin-top: 20px;
+    display: flex; 
+    justify-content: space-evenly;
+}
+
+
+
+.input_profile {
+    width: 50vw;
+    height: 30vh;
+}
+
+
+
+
+/* POST index */
+
+article{
+    align-items: center;
+    justify-content: center;
+}
+
+.post{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    margin-right: 5vw;
+    margin-left: 5vw;
+    border: 1px solid #000;
+    height: 40vh;
+    margin-bottom: 5vh;
+}
+
+
+.post img{
+    width: 40%;
+    height: 80%;
+    object-fit: cover;
+    
+    max-width: 1000px;
+    border: solid 1px #000;
+}
+
+.post_description {
+    width: 40vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-left: solid 1px #000;
+    border-right: solid 1px #000;
+}
+
+.post_item {
+    text-align: center;
+}
+
+
+
+/*  post.show  */
+
+
+.post_img,
+.post_show_item{
+    display: grid;
+    width: 94vw;
+    margin: 0 auto 3vw;
+    gap: 2vw;
+    grid-template-columns: 46vw 46vw;
+   
+}
+
+.post_show_item{
+    border: 1px solid #000;
+    align-items: center;
+    height: 45vh;
+}
+
+
+.post_content{
+    height: 90%;
+    border-left:1px solid #000 ;
+}
+
+
+.post_img img,
+.post_user img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    max-height: 40vh;
+
+    
+    
+    
+}
+
+.post_show_item div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
