@@ -249,7 +249,7 @@ article{
     margin: 0 auto 3vw;
     gap: 2vw;
     grid-template-columns: 46vw 46vw;
-   
+    background-color: aqua;
 }
 
 .post_show_item{
