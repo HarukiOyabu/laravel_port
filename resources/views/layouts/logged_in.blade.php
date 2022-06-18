@@ -6,7 +6,8 @@
         <ul>
                <li><a href="{{route('user',$my_user->id)}}">PROFILE</a></li>
                <li><a href="{{route('post.auth')}}">MY_POST</a></li>
-               <li><a href="">Follow</a></li> 
+               <li><a href="{{ route('follows.index') }}">Follow_User</a></li> 
+               <li><a href="{{ route('followers.index') }}">Follower</a></li>
                <li><a href="{{ route('post.create')}}" >New Post</a></li>
         </ul>
     </nav>

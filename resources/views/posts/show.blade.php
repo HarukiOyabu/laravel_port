@@ -29,7 +29,22 @@
                 @endif
             </div>
             <p>{{$post->description}}</p>
+
             
+            <div>
+                @if($post->isLikedBy(Auth::user()))
+                <a class= "like_button good">♡</a>
+                @else
+                <a class="like_button un_good">♡</a>
+                @endif
+
+                <form method="post" class="" action="{{ route('posts.toggle_like', $post) }}">
+                @csrf
+                @method('patch')
+                </form>
+</div>
+        
+
         </div>
     </div>
     <div class="post_img">
@@ -37,7 +52,15 @@
         <img src="{{ asset('storage/' . $post->image2) }}">
         
     </div>
-
 <section>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  /* global $ */
+  $('.like_button').on('click', (event) => {
+      $(event.currentTarget).next().submit();
+  })
+</script>
 @endsection
+
+

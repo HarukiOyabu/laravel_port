@@ -26,6 +26,8 @@ Route::get('/', function () {
 
 
 Route::controller(PostController::class)->group(function (){
+
+    Route::patch('/posts/{post}/toggle_like','toggleLike')->name('posts.toggle_like');
     Route::get('/posts/auth','auth')->name('post.auth');
     Route::get('/posts/show{post}','show')->name('post.show');
     Route::post('posts/create', 'store')->name('post.store');
@@ -51,6 +53,7 @@ Route::controller(UserController::class)->group(function () {
 
 
 Route::controller(FollowController::class)->group(function (){
+    Route::get('followers', 'followers_index')->name('followers.index');
     Route::get('/follows', 'index')->name('follows.index');
     Route::post('/follows' , 'store')->name('follows.store');
     Route::delete('/follows/{id}' , 'destroy')->name('follows.destory');

@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Post;
-use App\User;
+use App\Models\Post;
+use App\Models\User;
+use App\Models\Like;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\PostRequest;
@@ -71,6 +72,7 @@ class PostController extends Controller
             'title' => $request->title,
             'image' => $path,
             'image2'=> $path2,
+            
             'description' => $request->description,
 
         ]);
@@ -107,7 +109,22 @@ class PostController extends Controller
     }
 
 
-    
+    public function toggleLike($id){
+        $my_user = \Auth::user();
+        $post = Post::find($id);
+
+        if($post->isLikedBy($my_user)){
+            //いいねを取り消す
+            $post->likes->where('user_id', $my_user->id)->first()->delete();
+        } else
+            //いいねを保存
+            Like::create([
+                'user_id' => $my_user->id,
+                'post_id' => $post->id,
+            ]);
+
+        return redirect()->route('post.show',$id);
+    }
 
     public function __construct()
     {

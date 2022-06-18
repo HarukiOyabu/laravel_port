@@ -35,6 +35,16 @@
 
                 @endif
             </div>
+            <div class = "follow_count">
+                <div>
+                    <i>follow_user</i>
+                    <p>{{$follow_users->count()}}</p>
+                </div>
+                <div>
+                    <i>follower</i>
+                    <p>{{$followers->count()}}</p>
+                </div>
+            </div>
          </section>
     </div>
 

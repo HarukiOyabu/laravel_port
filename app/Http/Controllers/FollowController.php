@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Follow;
-use App\User;
+use App\Models\Follow;
+use App\Models\User;
 
 use Illuminate\Http\Request;
 
@@ -18,7 +18,7 @@ class FollowController extends Controller
            'follow_id' => $request->follow_id,
         ]);
         
-        return redirect()->route('user',$my_user->id);
+        return redirect()->route('follows.index',$my_user->id);
     }
  
     // フォロー削除処理
@@ -28,6 +28,33 @@ class FollowController extends Controller
         $follow = \Auth::user()->follows->where('follow_id', $id)->first();
         $follow->delete();
         
-        return redirect()->route('user', $my_user->id);
+        return redirect()->route('follows.index', $my_user->id);
+    }
+
+
+    //フォローユーザー一覧
+    public function index(){
+        $my_user = \Auth::user();
+        $follow_users = \Auth::user()->follow_users;
+
+        return view('users.follow',[
+            'title' => 'follow_users',
+            'my_user' => $my_user,
+            'follow_users' => $follow_users,
+
+        ]);
+    }
+
+    //フォロワー一覧
+    public function followers_index(){
+        $my_user = \Auth::user();
+        $followers = \Auth::user()->followers;
+
+        return view('users.follower',[
+            'title' => 'followers',
+            'my_user' => $my_user,
+            'followers' => $followers,
+            
+        ]);
     }
 }

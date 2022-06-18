@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-Use App\User;
-use App\Post;
+Use App\Models\User;
+use App\Models\Post;
+use App\Models\Follow;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\UserRequest;
@@ -17,11 +18,15 @@ class UserController extends Controller
         $my_user = \Auth::user();
 
         $user = User::find($user_id);
+        $follow_users = User::find($user_id)->follow_users;
+        $followers =User::find($user_id)->followers;
 
         return view('users.index', [
             'title'=> 'ユーザー画面',
             'my_user'=> $my_user,
             'user'=> $user,
+            'follow_users' =>$follow_users,
+            'followers' => $followers,
         ]);
 
     }
