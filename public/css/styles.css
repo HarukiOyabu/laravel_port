@@ -13,7 +13,7 @@ a {
     color: #000;
 }
 
-header{
+header section{
     display: flex;
     justify-content: space-between;
 }
@@ -69,7 +69,6 @@ footer {
     margin-top: 5vh;
 }
 
-foo
 
 .logged_in_footer{
     color: #000;
@@ -192,6 +191,11 @@ foo
     
 }
 
+.posts_count{
+    border-top: 1px groove #000;
+    padding: 20px;
+}
+
 
 
 /* POST index */
@@ -201,11 +205,38 @@ article{
     justify-content: center;
 }
 
+
+.places{
+    width: 94vw;
+    margin: 0 auto 3vw;
+    border: 1px groove #000;
+    padding: 10px;
+    list-style: none;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.places li{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+.user_search{
+    width: 94vw;
+    margin: 0 auto 3vw;
+    border: 1px groove #000;
+    padding: 15px;
+    text-align: center;
+}
+
+
 .post{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    
+   
     margin-right: 5vw;
     margin-left: 5vw;
     border: 1px solid #000;
@@ -249,7 +280,7 @@ article{
     margin: 0 auto 3vw;
     gap: 2vw;
     grid-template-columns: 46vw 46vw;
-    background-color: aqua;
+  
 }
 
 .post_show_item{
@@ -304,6 +335,58 @@ article{
 }
 
 
+
+.user_post {
+    margin-top: 5%;
+}
+
+.auth_command{
+    display: flex;
+    justify-content: space-between;
+    width: 60vw;
+    margin: 0 auto 3vw;
+}
+
+
+.comment_form{
+    width: 94vw;
+    margin: 0 auto 3vw;
+}
+
+
+.comments{
+    width: 87vw;
+    margin: 0 auto 3vw;
+    border: 1px solid #000;
+    padding-top: 2vh ;
+    padding-bottom: 2vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+
+.comment {
+    border-bottom: 1px groove gray;
+    margin-bottom: 5px;
+}
+
+.comment div{
+    display: flex;
+   align-items: center;
+}
+
+.comment div div{
+    display: block;
+}
+.comment_user_img{
+    border-radius: 50%;
+    width: 100px;
+    height:100px;
+    border: 1px groove #000;
+    object-fit: cover;
+    margin-right: 5px;
+
+}
+
 /* follow */
 
 .follow_user,
@@ -344,4 +427,107 @@ article{
 .follow_user_info div,
 .follower_info div{
     text-align: center;
+}
+
+
+/*  create.post */
+.create_post{
+    width: 94vw;
+    border: 1px solid #000;
+    margin: 0 auto 3vw;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+.create_post div{
+   
+    
+    margin-right: auto;
+    margin-left: auto;
+    width: 60%;
+    border-bottom: 1px dotted #000;
+    padding: 3vh;
+}
+
+.create_title{
+    width:80%;
+}
+
+
+.create_description{
+    width: 80%;
+    height:60px;
+}
+
+
+/* post edit_image */
+.edit_image{
+    text-align: center;
+}
+
+.edit_image section{
+
+    display: grid;
+    width: 94vw;
+    margin: 0 auto 3vw;
+    gap: 2vw;
+    grid-template-columns: 46vw 46vw;
+    border: 1px solid #000;
+    align-items: center;
+    height: 50vh;
+    
+}
+
+.edit_image div{   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.edit_image img{
+    object-fit: contain;
+    width: 30rem;
+    height:30rem;
+    
+}
+
+
+/*  search_index */
+
+.user_search_result{
+    margin: 0 auto 3vw;
+    display: grid;
+    grid-template-columns: 25vw 25vw 25vw;
+    padding-top: 5vh;
+    gap: 4vw;
+    
+}
+
+.user_search_result section{
+    border: 1px groove #000;
+    text-align: center;
+    padding: 10px;
+    height:100%;
+    
+}
+
+
+.user_search_result img{
+    border-radius: 50%;
+    width:100px;
+    height:100px;
+    border: 1px groove #000;
+    object-fit: cover;
+    
+}
+
+.user_search_result div{
+    padding: 10px;
+}
+
+
+.img_area{
+    border-bottom: 1px dotted #333;
 }

@@ -24,7 +24,24 @@ class PostRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' =>['required','max:25'],
+            'description' =>['required', 'max:255'],
+            'place_id' =>['required','exists:places,id'],
+            'image'=>[
+                'required',
+                'file',
+                'image',
+                'mimes:jpeg,jpg,png', 
+            ],
+            'image2'=>[
+                'required',
+                'file',
+                'image',
+                'mimes:jpeg,jpg,png', 
+            ],
+
+
+            
         ];
     }
 }

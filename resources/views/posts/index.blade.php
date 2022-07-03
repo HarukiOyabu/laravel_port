@@ -5,6 +5,26 @@
 @section('content')
 
 <article>
+<h2>都道府県別の投稿</h2>
+    <ul class="places">
+        
+        @forelse($places as $place)
+        <li><a href="{{ route('place.posts', $place->id) }}" class="place">{{$place->name}}</a></li>
+        @empty
+        @endforelse
+    </ul>
+
+    <div class="user_search">
+        <p>ユーザーを検索</p>
+        <form  method="POST"  action="{{route('user.search')}}">
+         @csrf
+        
+         <input type="text" name="keyword" placeholder="user-nameを入力">
+         <input type="submit" value="search">
+        </form>
+    </div>
+
+<h2>最新の投稿</h2>
     @forelse($posts as $post)
 
     <section class="post">

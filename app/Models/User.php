@@ -75,4 +75,8 @@ class User extends Authenticatable
       public function likePosts(){
         return $this->belongsToMany('App\Models\Post','likes');
       }
+
+      
+    
+
 }
