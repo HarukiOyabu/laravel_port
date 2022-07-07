@@ -1,6 +1,7 @@
 body {
     margin:0;
     padding:0;
+    background-color: #ece5e5;
 }
 
 h1 {
@@ -195,6 +196,7 @@ footer {
     border-top: 1px groove #000;
     padding: 20px;
 }
+
 
 
 
