@@ -39,6 +39,10 @@
     </div>
 
     <input type="submit" value="Post!">
+    
+    @foreach($errors->all() as $error)
+    <p class="error_message">{{$error}}</p>
+    @endforeach 
 </form>
 
 

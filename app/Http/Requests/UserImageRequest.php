@@ -25,6 +25,7 @@ class UserImageRequest extends FormRequest
     {
         return [
             'image' => [
+                'required',
                 'file', // ファイルがアップロードされている
                 'image', // 画像ファイルである
                 'mimes:jpeg,jpg,png', // 形式はjpegかpng

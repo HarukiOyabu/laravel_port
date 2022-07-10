@@ -24,7 +24,7 @@ class CommentRequest extends FormRequest
     public function rules()
     {
         return [
-            'text'=>['required','max:100'],
+            'comment'=>['required','max:100'],
         ];
     }
 }

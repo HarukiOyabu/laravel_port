@@ -7,6 +7,10 @@
     <form method="POST" action="{{route('login')}}" class="login_form">
          @csrf
         <h1>Login Form</h1>
+        @foreach($errors->all() as $error)
+        <p class="error_message">{{$error}}</p>
+        @endforeach 
+
         <div class="login_content">
           <label><input type="email" name="email" placeholder="mailaddress"></label>
           <label><input type="password" name="password" placeholder="password"></label>

@@ -72,10 +72,14 @@
     <form method='post' action="{{ route('comment.store') }}" class="comment_form">
         @csrf
         <input type="hidden" name="post_id" value="{{$post->id }}">
-        <input type="text" name="text" placeholder="add Comment" class="comment_text">
+        <input type="text" name="comment" placeholder="add Comment" class="comment_text">
         <input type="submit" value="Comment!">
+        @foreach($errors->all() as $error)
+        <p class="error_message">{{$error}}</p>
+        @endforeach 
     </form>
     <div class="comments">
+        
         @forelse($comments as $comment)
         <div class="comment">
             <div>

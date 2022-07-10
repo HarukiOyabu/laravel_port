@@ -8,6 +8,11 @@
 <form method="POST" action="{{route('register')}}" class="register_form">
     @csrf
     <h1>Sign Up</h1>
+
+    @foreach($errors->all() as $error)
+    <p class="error_message">{{$error}}</p>
+    @endforeach 
+    
     <div class="register_content">
         <label><input type="text" name="name" placeholder="UserName"></label>
         <label><input type="email" name="email" placeholder="mailaddress"></label>

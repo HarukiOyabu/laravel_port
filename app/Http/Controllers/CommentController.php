@@ -18,7 +18,7 @@ class CommentController extends Controller
         Comment::create([
             'post_id' =>$request->post_id,
             'user_id' =>$my_user->id,
-            'text' =>$request->text,
+            'text' =>$request->comment,
         ]);
 
         return redirect()->route('post.show', $request->post_id);

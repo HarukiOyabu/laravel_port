@@ -18,6 +18,10 @@
         <p>ユーザーを検索</p>
         <form  method="POST"  action="{{route('user.search')}}">
          @csrf
+
+         @foreach($errors->all() as $error)
+        <p class="error_message">{{$error}}</p>
+        @endforeach 
         
          <input type="text" name="keyword" placeholder="user-nameを入力">
          <input type="submit" value="search">
